@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Project 4</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid" style="padding: 60px;">
+	<div class="row">
+		<div class="col-md-12">
+			<span class="label label-primary">路由表</span> 
+			<table class="table" style="margin-top:15px;">
+				<thead>
+					<tr>
+						<th>
+							#
+						</th>
+						<th>
+							目的地址
+						</th>
+						<th>
+							下一跳
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							1
+						</td>
+						<td id="t-dip-1">
+							192.168.0.0
+						</td>
+						<td id="t-nh-1">
+							192.168.0.0
+						</td>
+					</tr>
+					<tr>
+						<td>
+							2
+						</td>
+						<td id="t-dip-2">
+							192.168.1.0
+						</td>
+						<td id="t-nh-2">
+							192.168.1.0
+						</td>
+					</tr>
+					<tr>
+						<td>
+							3
+						</td>
+						<td id="t-dip-3">
+							192.168.2.0
+						</td>
+						<td id="t-nh-3">
+							192.168.2.0
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		
+			<div class="route-table" style="margin-bottom:20px;">
+				<span class="label label-default">配置路由表</span>
+				<form id="rt-1" class="form-inline" style="margin:15px 0 10px 0;">
+				  <div class="form-group" style="margin-right:20px;">
+				    <label>目的地址</label>
+				    <input type="text" class="form-control" id="dip-1">
+				  </div>
+				  <div class="form-group" style="margin-right:20px;">
+				    <label>下一跳</label>
+				    <input type="text" class="form-control" id="nh-1">
+				  </div>
+				</form>
+				<form id="rt-2" class="form-inline" style="margin:5px 0 10px 0;">
+				  <div class="form-group" style="margin-right:20px;">
+				    <label>目的地址</label>
+				    <input type="text" class="form-control" id="dip-2">
+				  </div>
+				  <div class="form-group" style="margin-right:20px;">
+				    <label>下一跳</label>
+				    <input type="text" class="form-control" id="nh-2">
+				  </div>
+				</form>
+				<form id="rt-3" class="form-inline" style="margin:5px 0 10px 0;">
+				  <div class="form-group" style="margin-right:20px;">
+				    <label>目的地址</label>
+				    <input type="text" class="form-control" id="dip-3" >
+				  </div>
+				  <div class="form-group" style="margin-right:20px;">
+				    <label>下一跳</label>
+				    <input type="text" class="form-control" id="nh-3">
+				  </div>
+				</form>
+				<button class="btn btn-default" type="submit" id="save-rt">保存</button>
+			</div>
+
+			<span class="label label-default">路由信息</span>
+			<div id="route-des" style="margin:15px 0 40px 0;">
+			</div>
+			
+			<span class="label label-primary">主机</span>
+			<span id="ip-label" class="label label-info"></span>
+			<div class="host" style="margin-top:15px;">
+				<form id="dataForm" class="form-inline" style="margin:15px 0 10px 0;">
+				  <div class="form-group" style="margin-right:20px;">
+				    <label>目的地址</label>
+				    <input type="text" class="form-control" id="distIp">
+				  </div>
+				  <div class="form-group" style="margin-right:20px;">
+				    <label>数据</label>
+				    <input id="postData" type="text" class="form-control" id="data">
+				  </div>
+				  <button type="submit" class="btn btn-default">发送</button>
+				</form>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
